@@ -27,6 +27,9 @@ body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /*
   6. Improve media defaults
@@ -67,3 +70,6 @@ h6 {
 #__next {
   isolation: isolate;
 }
+main {}
+.gameboard {display: grid;grid-template-columns: repeat(3,1fr);width: max-content;}
+.box {border: 3px solid black;height: 200px;width: 200px;}
