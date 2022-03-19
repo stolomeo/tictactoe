@@ -70,6 +70,29 @@ h6 {
 #__next {
   isolation: isolate;
 }
-main {}
-.gameboard {display: grid;grid-template-columns: repeat(3,1fr);width: max-content;}
-.box {border: 3px solid black;height: 200px;width: 200px;}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.square-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: max-content;
+}
+.square {
+  border: 3px solid black;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10rem;
+}
+.player-display {
+  font-size: 3rem;
+}
+.reset-button {
+  width: 1rem;
+}
