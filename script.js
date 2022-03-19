@@ -12,18 +12,19 @@ const gamePlay = (() => {
 
   const getGameBoard = () => gameBoard;
   const handleClick = (e) => {
+    square = e.target;
     gameBoardID = e.target.id;
 
     updateGameBoard(gameBoardID);
 
-    placeMark();
+    placeMark(square);
   };
   const updateGameBoard = () => {
     gameBoard[gameBoardID] = "X";
   };
 
   const placeMark = () => {
-    squares.forEach((square) => (square.textContent = "X"));
+    square.textContent = "X";
   };
   return {
     getGameBoard,
